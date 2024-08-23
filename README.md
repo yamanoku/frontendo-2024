@@ -1,37 +1,16 @@
-# document-page-template
+# ブラウザ互換の重要性 - あらゆるユーザーに価値を届けるために必要なこと / The Importance of Browser Compatibility - Delivering Value to Every User
 
-Template for making a document page from a @yamanoku presentation.
+2024年08月24日に開催された[フロントエンドカンファレンス北海道2024](https://www.frontend-conf.jp/)にて登壇しました。このサイトは登壇した内容をテキスト化したものです。
 
-## Install
-```bash
-npm ci
-```
+[日本語ページ](https://yamanoku.net/frontendo-2024/ja/)
 
-## Dev Server
-```bash
-npm run serve
-```
+I spoke at [Frontend Conference Hokkaido 2024](https://www.frontend-conf.jp/) on August 24, 2024. This site is the text of my presentation.
 
-### Japanese Page
-```bash
-http://localhost:8081/ja/
-```
+[English Page](https://yamanoku.net/frontendo-2024/en/)
 
-### English Page
-```bash
-http://localhost:8081/en/
-```
+## Speakerdeck
 
-## Build
-```bash
-npm run build
-```
-
-## Deploy
-```bash
-npm run deploy
-```
-
+[ブラウザ互換の重要性 - あらゆるユーザーに価値を届けるために必要なこと / The Importance of Browser Compatibility - Delivering Value to Every User - Speaker Deck](https://speakerdeck.com/yamanoku/the-importance-of-browser-compatibility-delivering-value-to-every-user)
 ## License
 
-[MIT](./LICENSE)
+[CC BY-NC-SA 4.0](./LICENSE)
