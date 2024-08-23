@@ -1,0 +1,175 @@
+
+    <!doctype html>
+    <html lang="en">
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>The Importance of Browser Compatibility - Delivering Value to Every User</title>
+        <meta name="og:title" content="The Importance of Browser Compatibility - Delivering Value to Every User">
+        <meta name="og:description" content="yamanoku's presentation at Frontend Conference Hokkaido 2024">
+        <meta name="og:image" content="https://yamanoku.net/frontendo-2024/images/ogp-image-en.png">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@yamanoku">
+        <meta name="twitter:image:alt" content="The Importance of Browser Compatibility Delivering Value to Every User">
+        <meta property="og:locale" content="en">
+        <link rel="stylesheet" href="https://cdn.skypack.dev/yama-normalize">
+        <style>footer{padding: var(--y-rhythm-3);text-align: center;}</style>
+      </head>
+      <body>
+        <main id="main">
+          <hgroup>
+            <h1 style="margin-block-end: 0"><span>The Importance of Browser Compatibility</span></h1>
+            <p style="font-size: 1.425rem;"><span>Delivering Value to Every User</span></p>
+          </hgroup>
+          <p><img src="../images/title-en.png" alt="Presentation Slide Cover : The Importance of Browser Compatibility - Delivering Value to Every User"></p>
+<h2>Overview</h2>
+<p>In this presentation, we will focus on the importance of considering browser compatibility in front-end development. By looking back at the historical browser wars up to the present day, we will discuss the challenges developers and users face with browsers and the significance of maintaining compatibility.</p>
+<ul>
+<li>We will take a detailed look at how the current major browsers have remained, reflecting on the history of Internet Explorer support.</li>
+<li>We will delve into why adherence to web standards and compatibility is crucial and how a web that lacks it can impact users.</li>
+<li>We will introduce various efforts to maintain browser compatibility and explore ways to contribute to the overall health of the ecosystem.</li>
+</ul>
+<p>Developing with an awareness of browser compatibility in front-end development is a responsibility that goes beyond developers—it is essential for safeguarding the future of the web. In this session, we aim to deepen your understanding of browser compatibility and enable you to make informed decisions in your daily development work.</p>
+<h2>Translation Articles</h2>
+<p><a href="/en/" target="_blank">English page</a> / <a href="/ja/" target="_blank">日本語ページ</a></p>
+<h2>What are the responsibilities of Front-End Development?</h2>
+<p>The front-end field, which emerged as distinct from back-end development, encompasses a broad range of responsibilities. But what exactly does it mean to be involved in front-end development? Looking at the <a href="https://roadmap.sh/frontend" target="_blank">Frontend Developer Roadmap</a>, it becomes clear that the technical areas front-end developers engage with are vast and varied.</p>
+<p>However, I do not believe that mastering all of these areas is necessarily the responsibility of a front-end developer. This is not to suggest that any area should be neglected, but rather that we should focus more on the core essence of front-end development. I believe this core lies in the &quot;areas that surface in the browser&quot;.</p>
+<p>Websites and web applications are accessed and interacted with through browsers. Therefore, how something is displayed in a browser and how users interact with it are of utmost importance.</p>
+<p>One critical aspect to consider when thinking about browser behavior is &quot;<strong>browser compatibility</strong>&quot;. Ensuring that a website or web application is displayed consistently across different browsers requires an awareness of browser compatibility. I believe that being mindful of this and implementing it accordingly is one of the key responsibilities of a front-end developer.</p>
+<p>In this session, we will deepen our understanding of browser compatibility to help you make sound decisions in your daily development work.</p>
+<h2>The History of Browsers and the Current Situation</h2>
+<p>To understand why browser compatibility is necessary, let's take a look back at the history of browsers themselves.</p>
+<h3>The Beginning and Spread of Browsers</h3>
+<p>The ancestor of what we now call a browser was &quot;<strong>WorldWideWeb</strong>&quot;, developed by Tim Berners-Lee. Although it might be confused with the hypertext system, there was a browser specifically designed for viewing the web, and it was the only means to access it.</p>
+<p>After that, several browsers emerged, among which &quot;<strong>NCSA Mosaic</strong>&quot; was born. This browser supported multiple operating systems like Mac and UNIX, and its introduction played a significant role in spreading the internet to the general public.</p>
+<h3>The First Browser War</h3>
+<p>Following this, the developers of Mosaic founded a company and released &quot;<strong>Netscape Navigator</strong>&quot;, while Microsoft released &quot;<strong>Internet Explorer</strong>&quot; based on Mosaic's code. During this period, &quot;<strong>Opera</strong>&quot;, which is still being developed today, also made its debut.</p>
+<p>The first browser war began between Netscape Navigator and Internet Explorer. Although Netscape Navigator initially led the browser market, Microsoft gained popularity by bundling Internet Explorer with the Windows OS and introducing proprietary features like ActiveX, which enabled richer content. Eventually, Internet Explorer dominated the market with an overwhelming share.</p>
+<p>However, this intense browser war brought about significant differences between browsers, such as &quot;What could be displayed in Internet Explorer could not be displayed in Netscape&quot;, which frustrated developers.</p>
+<h3>The Second Browser War</h3>
+<p>Although Netscape Navigator lost the browser war, it later transitioned into the open-source Mozilla project, leading to the creation of &quot;<strong>Mozilla Firefox</strong>&quot;, which challenged Internet Explorer. In 2003, Apple introduced &quot;<strong>Safari</strong>&quot;, and in 2009, Google launched &quot;<strong>Google Chrome</strong>&quot;, which eventually overtook Internet Explorer's market share. The browsers that emerged during this period remain the major browsers used today.</p>
+<p>Internet Explorer continued to undergo version upgrades, but the changes were sometimes so drastic that they led to inconsistent displays across different versions. This necessitated the use of CSS hacks to ensure compatibility with specific versions. Some remnants of these adjustments can still be found in long-running web applications.</p>
+<h3>The End of Internet Explorer Support</h3>
+<p>Internet Explorer, which struggled to keep up with web standards, was a notorious challenge for web developers. Known as the need for &quot;IE11 compatibility&quot;, it required separate accommodations from other modern browsers. However, on May 19, 2021, Microsoft announced the end of support for Internet Explorer.</p>
+<p>The end of Internet Explorer support marked a significant shift, leaving only modern browsers that adhere to web standards. For developers who had long struggled with IE compatibility, this was welcome news.</p>
+<h2>The Importance of Browser Compatibility</h2>
+<p>Having reviewed the history of browsers, let's now discuss the increasing importance of browser compatibility in the current landscape.</p>
+<h3>The Browser Landscape After the Demise of Internet Explorer</h3>
+<p>The rendering engines of the browsers we discussed earlier in this history are as follows:</p>
+<ul>
+<li><em>Trident</em> (Internet Explorer)</li>
+<li><em>EdgeHTML</em> (Old Microsoft Edge)</li>
+<li><em>Presto</em> (Opera)</li>
+<li><em>Gecko</em> (Mozilla Firefox)
+<ul>
+<li><em>Servo</em></li>
+</ul>
+</li>
+<li><em>KHTML</em> (Konqueror)
+<ul>
+<li><em>WebKit</em> (Safari)
+<ul>
+<li><em>Blink</em> (Google Chrome)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>As of 2024, the following browser engines continue to be actively developed:</p>
+<ul>
+<li><em>Gecko</em> (Mozilla Firefox)
+<ul>
+<li><em>Servo</em></li>
+</ul>
+</li>
+<li><em>WebKit</em> (Safari)
+<ul>
+<li><em>Blink</em> (Chrome, Current Microsoft Edge)</li>
+</ul>
+</li>
+</ul>
+<p>While there used to be a variety of browser engines, the major browsers in use today are primarily driven by just three engines: Blink, Gecko, and WebKit.</p>
+<p>Although new browsers have been released, most are derivatives of Chromium. Despite the increase in browser options, no new browser engines have been introduced.</p>
+<h3>What If There Were Only One Browser Engine?</h3>
+<p>What would happen if the number of browser engines decreased and we were left with only one? It might seem tempting to think that this would simplify support, but this view is overly simplistic.</p>
+<p>Mark Nottingham from Cloudflare wrote an <a href="https://www.mnot.net/blog/2022/06/22/chromium-only" target="_blank">article speculating about a future where Chromium is the only surviving browser engine</a>. While the Chromium code might remain open-source, decision-making could become opaque, potentially leading to a situation where only Google’s internal politics shape the web. Additionally, strict government regulations on Google could significantly impact the future of the web.</p>
+<p>The progress we've seen, driven by competition, could be replaced by a web shaped solely by Google's vision.</p>
+<h3>The Impact of the DMA on the Web</h3>
+<p>It’s difficult to imagine a world where Chromium and Blink are the only dominant browser engines, but browser engine monopolies are already happening on some commonly used devices. For instance, on iOS, all browsers are built on WebKit, meaning that Chrome on iPhone or iPad is actually powered by WebKit rather than Chromium.</p>
+<p>However, recent developments, such as the Digital Markets Act (DMA) in the EU, have prompted changes. Under this regulation, Apple has been asked to allow browsers on iOS to use engines other than WebKit. This means that Chrome will use Blink, and Firefox will use Gecko on iOS. Currently, <a href="https://blogs.igalia.com/gyuyoung/2024/08/08/chrome-ios-browser-on-blink/" target="_blank">the implementation of Blink-based Chrome on iOS is underway</a>.</p>
+<p>Although these changes are taking place in the EU, Japan is also considering similar legislation, as seen in the recent cabinet approval of the &quot;Act to Promote Competition Regarding Certain Software Used on Smartphones&quot;. This law targets OS, app stores, browsers, and search engines, suggesting that similar changes may occur in Japan.</p>
+<p>Given these developments, focusing exclusively on a single browser might lead to the need to reassess previous projects. Therefore, it’s increasingly important to develop with browser compatibility in mind.</p>
+<h2>Developer Responsibility and Best Practices</h2>
+<p>Now that we understand the importance of browser compatibility, let's consider what we as front-end developers should be mindful of and how we can implement best practices.</p>
+<h3>Staying Informed About Browser Development</h3>
+<p>First and foremost, it's crucial to stay informed about the development of various browsers and the release of new features. By regularly checking the release blogs of major companies, you can stay updated on new features and changes.</p>
+<ul>
+<li><a href="https://developer.chrome.com/blog" target="_blank">Blog | Chrome for Developers</a></li>
+<li><a href="https://webkit.org/blog/" target="_blank">Blog | WebKit</a></li>
+<li><a href="https://www.mozilla.org/en-US/firefox/releases/" target="_blank">Mozilla Firefox Release Notes</a></li>
+</ul>
+<p>In addition to these, it's also beneficial to keep an eye on &quot;Intents&quot; resources, which provide insights into upcoming specifications and features. These updates are often shared on various social media platforms like X (formerly Twitter), Mastodon, and BlueSky.</p>
+<p>While it's ideal to check the sources directly, you can also access this information in Japanese:</p>
+<ul>
+<li><a href="https://mozaic.fm/" target="_blank">mozaic.fm</a>
+<ul>
+<li>Monthly Platform</li>
+</ul>
+</li>
+<li>Blogs from various companies:
+<ul>
+<li><a href="https://www.mitsue.co.jp/knowledge/blog/qc/" target="_blank">Mitsue-Links Co.,Ltd.</a></li>
+<li><a href="https://zenn.dev/p/cybozu_frontend" target="_blank">Cybozu Frontend</a></li>
+<li><a href="https://www.codegrid.net/" target="_blank">CodeGrid</a></li>
+</ul>
+</li>
+</ul>
+<h3>Understanding Efforts to Maintain Browser Compatibility</h3>
+<p>Browser compatibility doesn't happen automatically; it requires deliberate efforts. Here are some key initiatives that contribute to this goal.</p>
+<p>One significant effort is <a href="https://web-platform-tests.org/" target="_blank">Web Platform Tests</a>, a test suite designed to verify that browser engines adhere to web standards. By running these tests, developers can ensure that the implementation of browser engines is consistent with the established standards.</p>
+<p>Another initiative is the <a href="https://wpt.fyi/interop" target="_blank">Interop project</a>. Interop is a collaborative effort involving browser vendors and the free software consultancy Igalia to ensure web standards compatibility. This project started in 2021 and continues to this day.</p>
+<h3>Reporting Bugs</h3>
+<p>When you encounter a bug in a browser engine, it's important to report it. Chrome, Safari, and Firefox all have official bug-tracking systems where you can submit reports. If the issue is with another browser, you can report it via Web compat.</p>
+<ul>
+<li><a href="https://issues.chromium.org/issues/new" target="_blank">https://issues.chromium.org/issues/new</a></li>
+<li><a href="https://bugs.webkit.org/" target="_blank">https://bugs.webkit.org/</a></li>
+<li><a href="https://bugzilla.mozilla.org/" target="_blank">https://bugzilla.mozilla.org/</a></li>
+<li><a href="https://webcompat.com/" target="_blank">https://webcompat.com/</a></li>
+</ul>
+<p>While there's no guarantee of an immediate fix, reporting bugs can help reduce the need for developers to implement their own workarounds.</p>
+<h3>Participating in Surveys</h3>
+<p>Participating in surveys like <a href="https://stateofjs.com/en-US/" target="_blank">State of JavaScript</a>, <a href="https://stateofcss.com/en-US/" target="_blank">State of CSS</a>, and <a href="https://stateofhtml.com/en-US/" target="_blank">State of HTML</a> is also important. These surveys allow you to reassess the current technologies and express your opinions on whether you've used certain tools or are interested in them. Responses from the State of HTML survey, for example, are used by browser vendors and standardization bodies to prioritize implementation roadmaps and close gaps. Therefore, it’s a good idea to participate in these surveys when they become available.</p>
+<h3>Understanding Baseline</h3>
+<p>The final topic to discuss is the concept of <a href="https://web.dev/baseline" target="_blank">Baseline</a>. Baseline refers to a metric that indicates whether a particular web standard feature is supported consistently across multiple browsers.</p>
+<p>There are three categories in Baseline:</p>
+<ol>
+<li><strong>Widely available</strong>: The feature is consistently supported across multiple browsers and has been for several years.</li>
+<li><strong>Newly available</strong>: The feature is stable in the latest versions of browsers but may not work in older versions.</li>
+<li><strong>Limited availability</strong>: The feature is experimental and supported by only a few browsers.</li>
+</ol>
+<p>You can check Baseline information on MDN Web Docs.</p>
+<p>Design consultancy <a href="https://clearleft.com/" target="_blank">Clearleft</a> uses this Baseline concept when considering <a href="https://browsersupport.clearleft.com/" target="_blank">browser support</a>.</p>
+<p>They adopt a policy that allows for visual differences as long as core functionality is not affected. Personally, I believe that instead of merely listing recommended browser versions, it's more beneficial to understand and communicate which features are supported based on functionality.</p>
+<h2>The Future of Browsers</h2>
+<p>Having discussed various efforts surrounding browser compatibility, let’s now touch on the future of browser functionality and what lies ahead.</p>
+<h3>Privacy Concerns</h3>
+<p>A growing area of interest among browser users is privacy. Apple’s Safari includes features like Intelligent Tracking Prevention to protect users from cross-site tracking, while Brave offers Safe Browsing features aimed at enhancing user privacy. However, Firefox recently faced criticism from privacy-conscious users after enabling ad shortcuts on the new tab page by default.</p>
+<h3>Integration of Generative AI</h3>
+<p>Browsers are increasingly integrating generative AI to differentiate themselves. Chrome has introduced Gemini in Chrome DevTools to assist with error resolution, while Safari uses AI to enhance search capabilities. Different AI models are being employed for various use cases, which shows the potential for diverse applications. Personally, I’ve started using Microsoft Edge for reading foreign articles, as its AI tools help with translation and summarization.</p>
+<h3>Emergence of New Browsers</h3>
+<p>While the number of browser engines is decreasing, new browser development is also on the rise. For example, the Servo engine, written in Rust, is being used to develop a new browser called &quot;<a href="https://github.com/versotile-org/verso" target="_blank"><strong>Verso</strong></a>&quot;. This browser is intended to be integrated into Tauri, a desktop application framework’s WebView. Although still in development, you can download and test it locally.</p>
+<p>Another project, &quot;<a href="https://ladybird.org/" target="_blank"><strong>Ladybird</strong></a>&quot;, is also in progress, aiming to implement its own browser engine and JavaScript engine. An alpha version is expected to be released in 2026, and it will be interesting to see how new browser engines will influence the future of the web.</p>
+<hr>
+<p>In conclusion, browsers are continuously evolving with unique features and innovations, expanding the choices available to users. I believe in providing accessible browser experiences through these diverse platforms.</p>
+<p>Of course, there are limits to what one developer can achieve, so it’s crucial that everyone involved in web development collaborates to maintain compatibility and support the sustainable growth of the web.</p>
+<p>Let’s continue to uphold web standards and prioritize browser compatibility in our front-end development efforts.</p>
+
+        </main>
+        <footer>
+          <p>Copyright 2024, Okuto Oyama</p>
+          <p>Source : <a href="https://github.com/yamanoku/frontendo-2024/" target="_blank">yamanoku/frontendo-2024</a></p>
+        </footer>
+      </body>
+    </html>
+  

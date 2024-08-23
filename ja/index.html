@@ -1,0 +1,179 @@
+
+    <!doctype html>
+    <html lang="ja">
+      <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ブラウザ互換の重要性 - あらゆるユーザーに価値を届けるために必要なこと</title>
+        <meta name="og:title" content="ブラウザ互換の重要性 - あらゆるユーザーに価値を届けるために必要なこと">
+        <meta name="og:description" content="フロントエンドカンファレンス北海道2024の登壇資料">
+        <meta name="og:image" content="https://yamanoku.net/frontendo-2024/images/ogp-image-ja.png">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@yamanoku">
+        <meta name="twitter:image:alt" content="ブラウザ互換の重要性 あらゆるユーザーに価値を届けるために必要なこと">
+        <meta property="og:locale" content="ja">
+        <link rel="stylesheet" href="https://cdn.skypack.dev/yama-normalize">
+        <style>footer{padding: var(--y-rhythm-3);text-align: center;}</style>
+      </head>
+      <body>
+        <main id="main">
+          <hgroup>
+            <h1 style="margin-block-end: 0"><span style="word-break: keep-all; overflow-wrap: anywhere;">ブラウザ互換の​重要性</span></h1>
+            <p style="font-size: 1.425rem;"><span style="word-break: keep-all; overflow-wrap: anywhere;">あらゆる​ユーザーに​価値を​届ける​ために​必要な​こと</span></p>
+          </hgroup>
+          <p><img src="../images/title-ja.png" alt="発表スライド表紙 : ブラウザ互換の重要性 あらゆるユーザーに価値を届けるために必要なこと"></p>
+<h2>概要</h2>
+<p>本発表では、フロントエンド開発におけるブラウザ互換を意識することの重要性に焦点を当てます。<br>
+過去の歴史的なブラウザ戦争から現代に至るまでを振り返りつつ、開発者やユーザーが直面するブラウザの課題と互換性の重要性を語ります。</p>
+<ul>
+<li>Internet Explorerサポートという歴史を振り返りつつどのようにして現在の主要なブラウザたちが残ったのかを詳しく見ていきます</li>
+<li>Web標準に準拠した互換性がなぜ重要であるか、それが損なわれたWebはどのように影響を与えるかを掘り下げていきます</li>
+<li>ブラウザ互換性を維持するための各種取り組みを紹介し、エコシステム全体の健全性に貢献する方法を模索していきます</li>
+</ul>
+<p>ブラウザ互換を意識したフロントエンド開発は、単なる開発者だけの問題を超えるWebの未来を守るための責務です。このセッションで、ブラウザ互換の理解を深め、日々の開発において適切な意思決定ができるようになることを目指します。</p>
+<h2>翻訳記事一覧</h2>
+<p><a href="/ja/" target="_blank">日本語ページ</a> / <a href="/en/" target="_blank">English page</a></p>
+<h2>フロントエンドは何が責務なのか</h2>
+<p>バックエンドと分化して生まれたフロントエンドという領域ですが、フロントエンドに関わる人はどういうことに関わる人のことを指すのでしょうか。<a href="https://roadmap.sh/frontend" target="_blank">Frontend Developer Roadmap</a>を見ると、フロントエンド開発者が関わる技術領域は非常に広範囲にわたることがわかります。</p>
+<p>しかしながら、これらのすべてをできるようになることがフロントエンド開発者の責務だとは私は思いません。それぞれの領域をおろそかにしていいということが言いたいのではなく、より本質たるところに集中すべきなのではないかと思っています。その本質というのはどういう領域なのか、私は「ブラウザで表層する箇所」だと思っています。</p>
+<p>WebサイトやWebアプリというものはブラウザという媒体を通じて閲覧・操作できるようになります。そのため、ブラウザでどのように表示されるか、どのように操作されるかということが非常に重要です。</p>
+<p>ブラウザの挙動について考えるうえで重要なこととして「<strong>ブラウザ互換</strong>」があります。特定のWebサイトやWebアプリにおいて、どのブラウザでも同じように表示されるようにするためにはブラウザ互換への意識が必要であり、それを意識して実装に臨むことはフロントエンド開発者の責務の1つだとも考えています。</p>
+<p>今回はそのブラウザ互換の理解を深めていき、日々の開発において正しい意思決定ができるようになれるような内容を話していきます。</p>
+<h2>ブラウザの歴史と今の状況</h2>
+<p>なぜブラウザ互換が必要なのかを知るために、ブラウザそのものの歴史についてを振り返ってみます。</p>
+<h3>ブラウザの始まりと普及</h3>
+<p>ブラウザと呼ばれる始祖はティム・バーナーズ＝リーが開発した「<strong>WorldWideWeb</strong>」です。ハイパーテキストシステムのものと混同しそうですが、ブラウザとしてのものが存在していました。これがウェブを閲覧する唯一の手段でした。</p>
+<p>その後いくつかのブラウザが生まれて、その中で「<strong>NCSA Mosaic</strong>」が誕生しました。MacやUNIXなど複数のOSに対応していたこのブラウザの登場により、インターネットが一般社会に広まるきっかけとなりました。</p>
+<h3>第一次ブラウザ戦争</h3>
+<p>その後はMosaicの開発者が会社を設立し、「<strong>NetScape Navigator</strong>」がリリースし、MicrosoftはMosaicのコードをベースにして「<strong>Internet Explorer</strong>」をリリースしました。現在も開発が進められている「<strong>Opera</strong>」もこの時期に生まれました。</p>
+<p>最初のブラウザ戦争はこのNetScape NavigatorとInternet Explorerとで始まりました。NetScape Navigatorが当時はブラウザとしてリードしていましたが、MicrosoftはWindows OSにInternet Explorerを標準で搭載し、ActiveXといったリッチな表現を可能にする独自実装によって人気を高め、最終的にInternet Explorerが圧倒的なシェアを持つようになりました。</p>
+<p>しかしこの壮絶なブラウザ戦争の背後には「Internet Explorerでは表現できていたものが、NetScapeでは表示ができない」というブラウザ間での差異が存在し、開発者を悩ませることになっていました。</p>
+<h3>第二次ブラウザ戦争</h3>
+<p>ブラウザ戦争に敗れてしまったNetscape Navigatorですが、その後、オープンソースのMozillaプロジェクトへ移行し、「<strong>Mozilla Firefox</strong>」が登場し、Internet Explorerに対抗しました。その後2003年にAppleから「<strong>Safari</strong>」が生まれ、2009年にはGoogleが「<strong>Google Chrome</strong>」をリリースし、かつてあったInternet Explorerのシェアを奪っていきました。この頃に登場してきたブラウザたちは現在でも主要なブラウザとして使われています。</p>
+<p>Internet Explorerも徐々にバージョンアップを繰り返していきました。ですが、バージョンの破壊的変更を受けて表示の異なることがありました。そのため特定のバージョンのための表現が必要で、CSSハックをしなければありませんでした。運営が長期になったWebアプリケーションにはその片鱗が残っていることもあります。</p>
+<h3>Internet Explorerサポートの終了</h3>
+<p>そんな標準準拠に追いつけなかったInternet Explorerは、当時のWeb開発者にとっては非常に厄介な存在でした。いわゆる「IE11対応」と呼ばれて他モダンブラウザとは別途対応が必要でした。しかし、2021年5月19日にMicrosoftからInternet Explorerのサポート終了が発表されました。</p>
+<p>このInternet Explorerサポート終了により、Web標準に準拠したモダンブラウザたちが残り、IE対応として苦労していた開発者にとっては嬉しいニュースとなりました。</p>
+<h2>ブラウザ互換の重要性</h2>
+<p>ブラウザの歴史を振り返ったところで、次は現在の状況においていかにブラウザ互換が大切になってくるのか、についてを話していきます。</p>
+<h3>Internet Explorer亡き後のブラウザ事情</h3>
+<p>これまで紹介してきた歴史の中で登場してきたブラウザのレンダリングエンジンは以下の通りです。</p>
+<ul>
+<li><em>Trident</em>（Internet Explorer）
+<ul>
+<li><em>EdgeHTML</em>（旧Microsoft Edge）</li>
+</ul>
+</li>
+<li><em>Presto</em>（Opera）</li>
+<li><em>Gecko</em>（Mozilla Firefox）
+<ul>
+<li><em>Servo</em></li>
+</ul>
+</li>
+<li><em>KHTML</em>（Konqueror）
+<ul>
+<li><em>WebKit</em>（Safari）
+<ul>
+<li><em>Blink</em>（Google Chrome）</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>ここから2024年現在で開発が続けられているブラウザエンジンは以下の通りです。</p>
+<ul>
+<li><em>Gecko</em>（Mozilla Firefox）
+<ul>
+<li><em>Servo</em></li>
+</ul>
+</li>
+<li><em>WebKit</em> (Safari)</li>
+<li><em>Blink</em> (Chrome, 現Microsoft Edge)</li>
+</ul>
+<p>いくつものブラウザエンジンが存在していた時代から、主要なブラウザとして使われるものとしてはBlink、Gecko、WebKitの3つに絞られています。</p>
+<p>ここからいくつか新たにブラウザはリリースされているのですがChromiumの派生であるものばかりです。ブラウザの種類は増えていてもブラウザエンジンは新たには生まれていない状況です。</p>
+<h3>仮にブラウザエンジンが1つになったらどうなるのか</h3>
+<p>仮にもしもブラウザエンジンが減っていき、たった1️つだけになったらどうなるでしょうか。ブラウザエンジンが1つだけになったら、サポートも楽になるのでは？と考えてしまうのは非常に短絡的でしょう。</p>
+<p>Cloudflareに所属するマーク・ノッティンガム氏が、<a href="https://www.mnot.net/blog/2022/06/22/chromium-only" target="_blank">仮にChromiumだけが生き残る世界になる未来を予想した記事</a>を書いています。</p>
+<p>今後のChromiumはオープンソースでコード自体は見られるとしてもその意思決定においてまでは不透明なままで、Googleの見えない社内政治に巻き込まれて誰もが参加できなくなる可能性や、政府がGoogleに対して厳格な規制介入が入ることでWeb自体はどうなっていくのだろうかといったことが書かれています。</p>
+<p>競争相手が居るからこそ発展できてきたものがGoogleだけが考えるものが、Webの未来になってしまいます。</p>
+<h3>DMAの影響を受けるWeb</h3>
+<p>Chromium、Blinkだけが1つになるということは現実としては想像しづらいでしょうが、実はよく使うデバイスにおいてブラウザエンジンの寡占が行われています。iOSでのブラウザはWebkitベースで実装されており、iPhoneやiPadで使用するChromeはWebkit製です。</p>
+<p>ですが最近ではデジタル市場法、通称DMA（Digital Markets Act）という規制がEUで施行され、これによりAppleはSafari以外のブラウザをWebkit以外のブラウザエンジンを実装するような要請がありました。これによりChromeにはBlink、FirefoxにはGeckoで実装されるようになります。現在は<a href="https://blogs.igalia.com/gyuyoung/2024/08/08/chrome-ios-browser-on-blink/" target="_blank">BlinkによるChromeの実装が進められているようです</a>。</p>
+<p>EU圏での話ではありますが、日本でもこのDMAに影響を受けた「スマートフォンにおいて利用される特定ソフトウェアに係る競争の促進に関する法律案」が閣議決定されています。OS、アプリストア、ブラウザ、検索エンジンが対象となっているため、日本においても同様の変更の可能性があります。</p>
+<p>ここから考えうることとして、何か特定のブラウザのみに注力していくことはこれまで開発していたものを見直す可能性が高いこととも言えます。ブラウザ互換を意識した開発が重要になってくると考えられます。</p>
+<h2>開発者の責任と実践方法</h2>
+<p>ブラウザ互換の重要性を知ったうえで、我々フロントエンド開発者がどのようなことに気をつけて実践していくべきかを考えていきます。</p>
+<h3>ブラウザ開発の現状を知る</h3>
+<p>まず各ブラウザでの機能開発や新機能のリリースについての情報を知ることが重要です。各企業のリリースブログをチェックすることで、新機能や変更点を把握できます。</p>
+<ul>
+<li><a href="https://developer.chrome.com/blog" target="_blank">Blog | Chrome for Developers</a></li>
+<li><a href="https://webkit.org/blog/" target="_blank">Blog | WebKit</a></li>
+<li><a href="https://www.mozilla.org/en-US/firefox/releases/" target="_blank">Mozilla Firefox Release Notes</a></li>
+</ul>
+<p>次に新たにどういった仕様が追加されるかを知るためにIntentsというリソースを見ることもできます。現在はX（旧Twitter）、Mastodon、BlueSkyの各種SNSにて情報を配信するようになっています。</p>
+<p>情報については直接ソースを確認するのが良いですが、日本語からでも情報を知ることができます。</p>
+<ul>
+<li><a href="https://mozaic.fm/" target="_blank">mozaic.fm</a>
+<ul>
+<li>Monthly Platform</li>
+</ul>
+</li>
+<li>各社ブログなどでの発信
+<ul>
+<li><a href="https://www.mitsue.co.jp/knowledge/blog/qc/" target="_blank">株式会社ミツエーリンクス</a></li>
+<li><a href="https://zenn.dev/p/cybozu_frontend" target="_blank">サイボウズフロントエンド</a></li>
+<li><a href="https://www.codegrid.net/" target="_blank">CodeGrid</a></li>
+</ul>
+</li>
+</ul>
+<h3>ブラウザ互換を保つ取り組みを知る</h3>
+<p>ブラウザ互換は何もせずに実現できているわけではありません。具体的にはどのような形で取り組まれているのかを紹介していきます。</p>
+<p>まず1つに<a href="https://web-platform-tests.org/" target="_blank">Web Platform Tests</a>があります。Web Platform TestsはWeb標準に準拠したブラウザエンジンをテストするためのテストスイートです。これにより、ブラウザエンジンの実装がWeb標準に準拠しているかどうかを確認できます。</p>
+<p>次に<a href="https://wpt.fyi/interop" target="_blank">Interop</a>というプロジェクトがあります。InteropはブラウザベンダほかIgaliaというフリーソフトウェアコンサルタント企業が参加するWeb標準の互換性を確保するためのものです。この取り組みは2021年より始まり、今年も継続されています。</p>
+<h3>バグを報告する</h3>
+<p>ブラウザエンジンのバグを見つけた場合は、バグを報告することが重要です。</p>
+<p>Chrome、Safari、Firefoxでは公式にバグトラッキングがありその窓口からの報告が可能です。それ以外の場合はWeb compatより報告できます。</p>
+<ul>
+<li><a href="https://issues.chromium.org/issues/new" target="_blank">https://issues.chromium.org/issues/new</a></li>
+<li><a href="https://bugs.webkit.org/" target="_blank">https://bugs.webkit.org/</a></li>
+<li><a href="https://bugzilla.mozilla.org/" target="_blank">https://bugzilla.mozilla.org/</a></li>
+<li><a href="https://webcompat.com/" target="_blank">https://webcompat.com/</a></li>
+</ul>
+<p>報告したものが即時対応できるかどうかはわかりませんが、開発者での独自ハックを減らすことに繋げられます。</p>
+<h3>サーベイに回答してみる</h3>
+<p><a href="https://stateofjs.com/ja-JP/" target="_blank">State of JavaScript</a>や<a href="https://stateofcss.com/ja-JP/" target="_blank">State of CSS</a>、<a href="https://stateofhtml.com/ja-JP/" target="_blank">State of HTML</a>といったサーベイに参加して回答することも重要です。これにより、どのような技術が今あるのかを再認識できるのと、使ったことがある・使ったことがない、興味がある・興味がないというリアクションを示すこともできます。</p>
+<p>State of HTMLでの回答では、ブラウザベンダや標準化団体によって実装ロードマップの優先順位付け、ギャップ解消に活用されるとのことなので、サーベイが公開されたら機会を見つけて回答してみるとよいでしょう。</p>
+<h3>Baselineを知る</h3>
+<p>最後に紹介するのが<a href="https://web.dev/baseline" target="_blank">Baseline</a>です。これはとあるWeb標準の機能がクロスブラウザ対応の安定した実装となっているかを示す指標です。</p>
+<p>Baselineには3種類あります。</p>
+<ol>
+<li><strong>Widely Available</strong>: クロスブラウザで一貫してサポートされていて何年も前から複数のブラウザーでサポートされている証</li>
+<li><strong>Newly available</strong>: 最新版は安定しているが、古いブラウザでは動作しない可能性があるという証</li>
+<li><strong>Limited availability</strong>: 実験的機能でまだ一部のブラウザでしか適応されていない証</li>
+</ol>
+<p>これはMDN Web Docsで確認できるようになっています。</p>
+<p>デザインコンサルティングの<a href="https://clearleft.com/" target="_blank">Clearleft社</a>では<a href="https://browsersupport.clearleft.com/" target="_blank">ブラウザサポート</a>をこのBaselineを参考にしています。</p>
+<p>コア機能の影響がない範囲で見た目に差異がある場合はそれを許容するというポリシーを持っているようです。個人的にはこのように、ブラウザのバージョンにて推奨環境を提示するよりも機能ベースでどこまでサポートしているかを把握しておいたほうがよいと考えています。</p>
+<h2>ブラウザのこれから</h2>
+<p>以上がブラウザ互換に関する取り組みの一部でしたが、最後にブラウザ自体がもつ機能についてやこれからについてを触れていきます。</p>
+<p>ブラウザを使っている中で関心の高まっている部分としてプライバシーがあります。</p>
+<p>AppleではSafariでのサイト越えトラッキング防止やBraveのセーフ・ブラウジングなどユーザーのプライバシーを守るための機能をもつブラウザがあります。一方、最近Firefoxでは新しいタブページでの広告ショートカットをデフォルトでONになるような変更があり、一部プライバシーに厳しいユーザーからは批判を受けていました。</p>
+<p>ブラウザに生成AIを搭載して差異を出そうとしています。</p>
+<p>ChromeではChrome DevToolsにGeminiを使い、エラーの解消などに役立てるようにしていたり、Safariでは生成AIによって検索のサポートをするなどAIモデルもそれぞれ異なって多様な使い方が期待されています。私は海外の記事を読んでる最中に翻訳と要約を生成AIにしてもらうためMicrosoft Edgeを使用するようになりました。</p>
+<p>先ほどブラウザエンジンが減っている話をお伝えしましたが、新たなブラウザ作りの動きも生まれてきています。</p>
+<p>Rust製のブラウザエンジンであるServoによって「<a href="https://github.com/versotile-org/verso" target="_blank"><strong>Verso</strong></a>」というブラウザの開発がされています。これはデスクトップアプリケーションフレームワークであるTauriのWebViewに組み込むことが目的とされています。現在はまだ開発途中ですが手元でダウンロードしてきて試すことができます。</p>
+<p>「<a href="https://ladybird.org/" target="_blank"><strong>Ladybird</strong></a>」というプロジェクトも始動しており、独自のブラウザエンジンとJavaScriptエンジンを実装していきます。現時点で2年後の2026年にα版がリリースされる予定で実際に試すことになるのはもう少し先になりますが、こうした新たなブラウザエンジンが生まれることでWebの未来がどう変わっていくのか楽しみです。</p>
+<hr>
+<p>このようにブラウザはそれぞれで異なる機能や特徴を打ち出し、ユーザーへの選択肢を広げていくための努力を続けています。私はそのブラウザたちを通じて誰でもがアクセスできるブラウザ体験を提供していきたいと思っています。</p>
+<p>もちろん、いち開発者だけではできる範囲も限られるため、Webに関わる皆が互換性を維持するものに協力していくことも重要だと思います。</p>
+<p>Webの持続的な発展が続くよう、Web標準を守りブラウザ互換を意識したフロントエンド開発を続けていきましょう。</p>
+
+        </main>
+        <footer>
+          <p>Copyright 2024, Okuto Oyama</p>
+          <p>Source : <a href="https://github.com/yamanoku/frontendo-2024/" target="_blank">yamanoku/frontendo-2024</a></p>
+        </footer>
+      </body>
+    </html>
+  
