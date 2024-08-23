@@ -19,7 +19,7 @@ Developing with an awareness of browser compatibility in front-end development i
 
 ## Translation Articles
 
-[English page](/en/) / [日本語ページ](/ja/)
+[English page](https://yamanoku.net/frontendo-2024/en/) / [日本語ページ](https://yamanoku.net/frontendo-2024/ja/)
 
 ## What are the responsibilities of Front-End Development?
 
