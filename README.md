@@ -11,6 +11,7 @@ I spoke at [Frontend Conference Hokkaido 2024](https://www.frontend-conf.jp/) on
 ## Speakerdeck
 
 [ブラウザ互換の重要性 - あらゆるユーザーに価値を届けるために必要なこと / The Importance of Browser Compatibility - Delivering Value to Every User - Speaker Deck](https://speakerdeck.com/yamanoku/the-importance-of-browser-compatibility-delivering-value-to-every-user)
+
 ## License
 
 [CC BY-NC-SA 4.0](./LICENSE)
