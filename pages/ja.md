@@ -20,7 +20,7 @@ lang: ja
 
 ## 翻訳記事一覧
 
-[日本語ページ](/ja/) / [English page](/en/)
+[日本語ページ](https://yamanoku.net/frontendo-2024/ja/) / [English page](https://yamanoku.net/frontendo-2024/en/)
 
 ## フロントエンドは何が責務なのか
 
