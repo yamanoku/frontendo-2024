@@ -11,7 +11,6 @@ module.exports = (eleventyConfig) => {
   const milaOptions = {
     attrs: {
       target: "_blank",
-      rel: "noopener"
     }
   };
   const markdownLib = markdownIt(mdOptions).use(mila, milaOptions).use(markdownItFootnote);
