@@ -101,7 +101,7 @@ The progress we've seen, driven by competition, could be replaced by a web shape
 
 ### The Impact of the DMA on the Web
 
-It’s difficult to imagine a world where Chromium and Blink are the only dominant browser engines, but browser engine monopolies are already happening on some commonly used devices. For instance, on iOS, all browsers are built on WebKit, meaning that Chrome on iPhone or iPad is actually powered by WebKit rather than Chromium.
+It’s difficult to imagine a world where Chromium and Blink are the only dominant browser engines, but browser engine monopolies are already happening on some commonly used devices. For instance, on iOS, all browsers are built on WebKit, meaning that Chrome on iPhone or iPad is actually powered by WebKit rather than Chromium. Of course, similar situations are occurring with other browsers as well.
 
 However, recent developments, such as the Digital Markets Act (DMA) in the EU, have prompted changes. Under this regulation, Apple has been asked to allow browsers on iOS to use engines other than WebKit. This means that Chrome will use Blink, and Firefox will use Gecko on iOS. Currently, [the implementation of Blink-based Chrome on iOS is underway](https://blogs.igalia.com/gyuyoung/2024/08/08/chrome-ios-browser-on-blink/).
 
@@ -136,9 +136,9 @@ While it's ideal to check the sources directly, you can also access this informa
 
 Browser compatibility doesn't happen automatically; it requires deliberate efforts. Here are some key initiatives that contribute to this goal.
 
-One significant effort is [Web Platform Tests](https://web-platform-tests.org/), a test suite designed to verify that browser engines adhere to web standards. By running these tests, developers can ensure that the implementation of browser engines is consistent with the established standards.
+One significant effort is [Web Platform Tests](https://web-platform-tests.org/), this test suite evaluates whether a browser engine conforms to web standards, allowing developers to check the extent to which a browser engine implementation adheres to these standards.
 
-Another initiative is the [Interop project](https://wpt.fyi/interop). Interop is a collaborative effort involving browser vendors and the free software consultancy Igalia to ensure web standards compatibility. This project started in 2021 and continues to this day.
+Another initiative is the [Interop project](https://wpt.fyi/interop). Interop is a collaborative effort involving browser vendors and the software consultancy as Igalia to ensure web standards compatibility. This project started in 2021 and continues to this day.
 
 ### Reporting Bugs
 
@@ -187,7 +187,7 @@ Browsers are increasingly integrating generative AI to differentiate themselves.
 
 While the number of browser engines is decreasing, new browser development is also on the rise. For example, the Servo engine, written in Rust, is being used to develop a new browser called "[**Verso**](https://github.com/versotile-org/verso)". This browser is intended to be integrated into Tauri, a desktop application framework’s WebView. Although still in development, you can download and test it locally.
 
-Another project, "[**Ladybird**](https://ladybird.org/)", is also in progress, aiming to implement its own browser engine and JavaScript engine. An alpha version is expected to be released in 2026, and it will be interesting to see how new browser engines will influence the future of the web.
+Another project, "[**Ladybird**](https://ladybird.org/)", is also in progress, aiming to implement its own browser engine and JavaScript engine. An alpha version is expected to be released in 2026, and it will be interesting to see how new browser will influence the future of the web.
 
 ---
 
