@@ -197,3 +197,17 @@ Of course, there are limits to what one developer can achieve, so it’s crucial
 
 Let’s continue to uphold web standards and prioritize browser compatibility in our front-end development efforts.
 
+## References
+
+- [インターネットの歴史がわかる | おさらい！Web制作史](https://www.cpi.ad.jp/25th/chronology/)
+- [フォクすけの Firefox 情報局 - Firefox って何？](https://foxkeh.jp/)
+- [Web Standards Interop 2022 ～TechFeed Conference 2022講演より | gihyo.jp](https://gihyo.jp/article/2022/09/tfc012-web_standards)
+- [主要ブラウザベンダー、互換性問題を解決するプロジェクト"Interop 2024"を発表 - InfoQ](https://www.infoq.com/jp/news/2024/03/interop-2024-announced/)
+- [DMA（デジタル市場法）が日本のユーザーにとっても無視できない理由 | Vivaldi Browser](https://vivaldi.com/ja/blog/reasons-why-dma-should-not-be-ignored-in-japan/)
+- [Web Runtime](https://www.youtube.com/watch?v=qpRiqdVPRlQ)
+- [進むレンダリングエンジンの寡占化に想う | コラム | ミツエーリンクス](https://www.mitsue.co.jp/knowledge/column/20181211.html)
+- [Microsoft EdgeのChromium移行とか - fragmentary](https://myakura.hatenablog.com/entry/2018/12/07/061902)
+- [EdgeHTMLを悼む - saneyuki_s log](https://saneyukis.hatenablog.com/entry/2018/12/10/005530)
+- [Web Browser History - First, Early | LivingInternet](https://www.livinginternet.com/w/wi_browse.htm)
+- [アップル、Safariを発表 - Apple (日本)](https://www.apple.com/jp/newsroom/2003/01/07Apple-Unveils-Safari/)
+- [Chromium と WebKit でシェア 9 割以上に、ブラウザーシェアの激動の 10 年史をダラダラと語る – webfrontend.ninja](https://webfrontend.ninja/browser-10-years-history-chromium-webkit/)
