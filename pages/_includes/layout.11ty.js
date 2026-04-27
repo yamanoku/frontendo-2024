@@ -14,7 +14,6 @@ exports.render = (data) => {
         <meta name="twitter:image:alt" content="${data.title} ${data.subtitle}">
         <meta property="og:locale" content="${data.lang}">
         <link rel="stylesheet" href="https://cdn.skypack.dev/yama-normalize">
-        <style>footer{padding: var(--y-rhythm-3);text-align: center;}</style>
       </head>
       <body>
         <main id="main">
